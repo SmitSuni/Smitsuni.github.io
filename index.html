@@ -1,12 +1,385 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi sitio público</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smit Alexander Suni Morales — CV</title>
+<meta name="description" content="Resumen curricular de Smit Alexander Suni Morales, estudiante de Ingeniería Estadística e Informática en la UNA Puno.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #faf8f3;
+    --bg-card: #ffffff;
+    --bg-alt: #f1ede3;
+    --ink: #20242c;
+    --ink-soft: #5c6270;
+    --accent: #1d3557;
+    --accent-2: #b08968;
+    --line: #e3ddcf;
+    --radius: 10px;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  body{
+    font-family:'Inter', sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.6;
+  }
+  .wrap{
+    max-width:1080px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns: 290px 1fr;
+    gap:0;
+  }
+  /* ---------- Sidebar ---------- */
+  aside{
+    background:var(--accent);
+    color:#eef2f6;
+    padding:3rem 2rem;
+  }
+  .avatar{
+    width:108px; height:108px;
+    border-radius:50%;
+    overflow:hidden;
+    border:3px solid rgba(255,255,255,.25);
+    margin-bottom:1.25rem;
+  }
+  .avatar img{ width:100%; height:100%; object-fit:cover; display:block; }
+  aside h1{
+    font-family:'Fraunces', serif;
+    font-size:1.55rem;
+    font-weight:600;
+    line-height:1.25;
+    margin-bottom:.35rem;
+  }
+  .role{
+    font-size:.92rem;
+    color:var(--accent-2);
+    font-weight:500;
+    margin-bottom:1.75rem;
+  }
+  .side-block{ margin-bottom:1.9rem; }
+  .side-label{
+    font-family:'JetBrains Mono', monospace;
+    font-size:.68rem;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:var(--accent-2);
+    margin-bottom:.6rem;
+  }
+  .contact-line{
+    display:flex; gap:.55rem;
+    font-size:.86rem;
+    color:#dde4ec;
+    margin-bottom:.5rem;
+    word-break:break-word;
+  }
+  .skill-group{ margin-bottom:1.1rem; }
+  .skill-group h4{
+    font-size:.82rem;
+    font-weight:600;
+    margin-bottom:.4rem;
+    color:#f3f5f8;
+  }
+  .skill-group ul{ list-style:none; }
+  .skill-group li{
+    font-size:.82rem;
+    color:#c7d1dc;
+    padding:.2rem 0;
+  }
+  .skill-group li::before{ content:"— "; color:var(--accent-2); }
+  .lang-pill{
+    display:inline-block;
+    font-size:.8rem;
+    background:rgba(255,255,255,.12);
+    padding:.3rem .7rem;
+    border-radius:20px;
+  }
+
+  /* ---------- Main column ---------- */
+  main{ padding:3rem 3rem 2rem; background:var(--bg-card); }
+
+  .metric-strip{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:1rem;
+    margin-bottom:2.5rem;
+  }
+  .metric{
+    background:var(--bg-alt);
+    border-radius:var(--radius);
+    padding:1rem 1.1rem;
+    border-left:3px solid var(--accent-2);
+  }
+  .metric .num{
+    font-family:'JetBrains Mono', monospace;
+    font-size:1.4rem;
+    font-weight:600;
+    color:var(--accent);
+  }
+  .metric .label{
+    font-size:.74rem;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:.04em;
+  }
+
+  section{ margin-bottom:2.3rem; }
+  section h2{
+    font-family:'Fraunces', serif;
+    font-size:1.25rem;
+    font-weight:600;
+    color:var(--accent);
+    margin-bottom:1rem;
+    display:flex;
+    align-items:center;
+    gap:.75rem;
+  }
+  section h2::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--line);
+  }
+  .profile-text p{ margin-bottom:.85rem; color:#3a3f48; font-size:.96rem; }
+
+  .edu-item{
+    border-left:3px solid var(--accent);
+    padding-left:1rem;
+  }
+  .edu-item .head{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:.4rem;
+    margin-bottom:.3rem;
+  }
+  .edu-item .title{ font-weight:600; font-size:1rem; }
+  .edu-item .date{
+    font-family:'JetBrains Mono', monospace;
+    font-size:.78rem;
+    color:var(--ink-soft);
+  }
+  .edu-item .subtitle{ font-size:.88rem; color:var(--ink-soft); margin-bottom:.4rem; }
+  .edu-item p{ font-size:.92rem; color:#454a53; }
+
+  .proj-grid{ display:grid; gap:1rem; }
+  .proj-card{
+    background:var(--bg-alt);
+    border-radius:var(--radius);
+    padding:1.1rem 1.25rem;
+  }
+  .proj-card .head{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:.4rem;
+    margin-bottom:.45rem;
+  }
+  .proj-card .title{ font-weight:600; font-size:.97rem; color:var(--accent); }
+  .proj-card .date{ font-family:'JetBrains Mono', monospace; font-size:.76rem; color:var(--ink-soft); }
+  .proj-card p{ font-size:.88rem; color:#454a53; margin-bottom:.6rem; }
+  .tags{ display:flex; flex-wrap:wrap; gap:.4rem; }
+  .tag{
+    font-size:.72rem;
+    background:var(--accent);
+    color:#fff;
+    padding:.2rem .6rem;
+    border-radius:20px;
+  }
+
+  .competencias{ display:flex; flex-wrap:wrap; gap:.6rem; }
+  .competencias span{
+    font-size:.84rem;
+    border:1px solid var(--line);
+    padding:.35rem .8rem;
+    border-radius:20px;
+    color:#3a3f48;
+  }
+
+  .objetivo{
+    background:var(--bg-alt);
+    border-left:4px solid var(--accent-2);
+    padding:1.1rem 1.25rem;
+    border-radius:var(--radius);
+    font-size:.92rem;
+    color:#3a3f48;
+  }
+
+  footer{
+    text-align:center;
+    padding:1.5rem;
+    font-size:.78rem;
+    color:var(--ink-soft);
+    border-top:1px solid var(--line);
+  }
+  footer a{ color:var(--accent); text-decoration:none; }
+
+  @media (max-width: 760px){
+    .wrap{ grid-template-columns: 1fr; }
+    main{ padding:2rem 1.4rem; }
+    aside{ padding:2rem 1.4rem; }
+    .metric-strip{ grid-template-columns: 1fr 1fr; }
+  }
+</style>
 </head>
 <body>
-  <h1>Bienvenido a mi página</h1>
-  <p>Este es mi proyecto publicado con GitHub Pages.</p>
+
+<div class="wrap">
+
+  <aside>
+    <div class="avatar"><img src="https://avatars.githubusercontent.com/SmitSuni" alt="Smit Alexander Suni Morales"></div>
+    <h1>Smit Alexander Suni Morales</h1>
+    <p class="role">Ingeniería Estadística e Informática</p>
+
+    <div class="side-block">
+      <div class="side-label">Contacto</div>
+      <div class="contact-line">📧 73584265@est.unap.edu.pe</div>
+      <div class="contact-line">📍 Puno, Perú</div>
+      <div class="contact-line">🔗 github.com/SmitSuni</div>
+    </div>
+
+    <div class="side-block">
+      <div class="side-label">Habilidades técnicas</div>
+      <div class="skill-group">
+        <h4>Programación</h4>
+        <ul>
+          <li>Python (Tkinter, NumPy, Pandas)</li>
+          <li>Java (POO, Swing)</li>
+          <li>C++ (WinAPI, STL)</li>
+          <li>HTML, CSS, JavaScript</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4>Bases de datos</h4>
+        <ul>
+          <li>MariaDB / MySQL</li>
+          <li>SQL avanzado</li>
+          <li>Modelado de datos</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4>Estadística</h4>
+        <ul>
+          <li>Estadística descriptiva e inferencial</li>
+          <li>Regresión lineal, Poisson y binomial negativa</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4>Herramientas</h4>
+        <ul>
+          <li>Apache NetBeans / VS Code</li>
+          <li>Git & GitHub Pages</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="side-block">
+      <div class="side-label">Idioma</div>
+      <span class="lang-pill">Español — Nativo</span>
+    </div>
+  </aside>
+
+  <main>
+
+    <div class="metric-strip">
+      <div class="metric">
+        <div class="num">15.2/20</div>
+        <div class="label">Promedio ponderado</div>
+      </div>
+      <div class="metric">
+        <div class="num">5+</div>
+        <div class="label">Proyectos académicos</div>
+      </div>
+      <div class="metric">
+        <div class="num">2021–hoy</div>
+        <div class="label">UNA Puno</div>
+      </div>
+    </div>
+
+    <section class="profile-text">
+      <h2>Perfil profesional</h2>
+      <p>Estudiante de la Universidad Nacional del Altiplano, con formación orientada a programación, bases de datos y estadística. He desarrollado proyectos académicos que me permitieron adquirir experiencia práctica en el diseño e implementación de sistemas informáticos, aplicando programación estructurada y orientada a objetos.</p>
+      <p>Cuento con conocimientos en desarrollo de aplicaciones de escritorio con interfaz gráfica (Python, Java, C++), administración de bases de datos relacionales en MariaDB, y análisis estadístico aplicado, incluyendo modelos de regresión lineal, Poisson y binomial negativa.</p>
+    </section>
+
+    <section>
+      <h2>Educación</h2>
+      <div class="edu-item">
+        <div class="head">
+          <span class="title">Universidad Nacional del Altiplano</span>
+          <span class="date">2021 — Actualidad</span>
+        </div>
+        <div class="subtitle">Ingeniería Estadística e Informática · Promedio ponderado &gt;15/20</div>
+        <p>Formación orientada al desarrollo de software, bases de datos, estadística aplicada y sistemas de información, con desarrollo constante de proyectos académicos.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Proyectos destacados</h2>
+      <div class="proj-grid">
+
+        <div class="proj-card">
+          <div class="head">
+            <span class="title">Dashboard personal con herramientas de ingeniería</span>
+            <span class="date">2024</span>
+          </div>
+          <p>Dashboard web con conversor de unidades, calculadora de resistencia de materiales según RNE, diseño de escaleras y módulo de análisis estadístico con visualizaciones SVG animadas.</p>
+          <div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div>
+        </div>
+
+        <div class="proj-card">
+          <div class="head">
+            <span class="title">Sistema de estadística con interfaz gráfica</span>
+            <span class="date">2024</span>
+          </div>
+          <p>Aplicación en Python que calcula medidas estadísticas descriptivas e inferenciales y genera histogramas, curvas normales y diagramas de caja para datos agrupados y no agrupados.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Tkinter</span><span class="tag">NumPy</span></div>
+        </div>
+
+        <div class="proj-card">
+          <div class="head">
+            <span class="title">Sistema de biblioteca universitaria</span>
+            <span class="date">2024</span>
+          </div>
+          <p>Gestión de usuarios, reservas y préstamos de libros con persistencia en MariaDB y generación de reportes.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">MariaDB</span><span class="tag">SQL</span></div>
+        </div>
+
+        <div class="proj-card">
+          <div class="head">
+            <span class="title">Aplicación de métodos numéricos en C++</span>
+            <span class="date">2023 — 2024</span>
+          </div>
+          <p>Herramienta con WinAPI para resolución de ecuaciones, cálculo de raíces y graficación interactiva de funciones matemáticas.</p>
+          <div class="tags"><span class="tag">C++</span><span class="tag">WinAPI</span></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Competencias personales</h2>
+      <div class="competencias">
+        <span>Responsabilidad y compromiso</span>
+        <span>Capacidad analítica</span>
+        <span>Organización y planificación</span>
+        <span>Aprendizaje continuo</span>
+        <span>Adaptabilidad</span>
+        <span>Trabajo en equipo</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Objetivo profesional</h2>
+      <div class="objetivo">
+        Busco aplicar de forma práctica los conocimientos adquiridos en mi formación académica, fortalecer mis competencias en programación y bases de datos, y aportar en un equipo de trabajo en desarrollo de software, análisis de datos y gestión de bases de datos, mientras sigo aprendiendo y creciendo profesionalmente.
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  © 2026 Smit Alexander Suni Morales · <a href="https://github.com/SmitSuni" target="_blank" rel="noopener noreferrer">github.com/SmitSuni</a>
+</footer>
+
 </body>
 </html>
-
