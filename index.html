@@ -4,290 +4,334 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Smit Suni Morales · CV</title>
-  <meta name="description" content="Smit Alexander Suni Morales — Estudiante de Ingeniería Estadística e Informática (UNAP, Puno). Ciencia de datos, Machine Learning e investigación aplicada.">
-  <meta property="og:title" content="Smit Alexander Suni Morales · Ciencia de datos y estadística">
+  <meta name="description" content="Smit Alexander Suni Morales — Ingeniería Estadística e Informática (UNAP, Puno). Ciencia de datos, Machine Learning, desarrollo de software e investigación.">
+  <meta property="og:title" content="Smit Alexander Suni Morales · CV">
   <meta property="og:description" content="Ingeniería Estadística e Informática · Universidad Nacional del Altiplano · Puno, Perú">
   <meta property="og:image" content="img/foto.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="progress" aria-hidden="true"><i id="progress"></i></div>
 
-  <header class="nav" id="nav">
-    <a class="brand" href="#inicio">S<span>·</span>S<span>·</span>M</a>
-    <nav>
-      <a href="#perfil">Perfil</a>
-      <a href="#experiencia">Experiencia</a>
-      <a href="#investigacion">Investigación</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#habilidades">Habilidades</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-    <div class="nav-actions">
-      <button class="icon-btn" id="theme" aria-label="Cambiar tema">
-        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-      </button>
-      <button class="icon-btn menu" id="menu" aria-label="Abrir menú">
-        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-      </button>
+<div class="wrap">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="side">
+    <div class="avatar"><img src="img/foto.jpg" alt="Smit Alexander Suni Morales" width="1200" height="1600"></div>
+    <h1>Smit Alexander<br>Suni Morales</h1>
+    <p class="role">Ingeniería Estadística e Informática</p>
+
+    <div class="side-block">
+      <div class="side-label">Contacto</div>
+      <a class="contact-line" href="mailto:73584265@est.unap.edu.pe">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z M3 7l9 6 9-6"/></svg>73584265@est.unap.edu.pe
+      </a>
+      <div class="contact-line">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Puno, Perú
+      </div>
+      <a class="contact-line" href="https://github.com/SmitSuni" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.5a3 3 0 0 0-.8-2.3c2.7-.3 5.5-1.3 5.5-6a4.7 4.7 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.3 1.3a11.4 11.4 0 0 0-6 0C6.7 2.5 5.7 2.8 5.7 2.8a4.3 4.3 0 0 0-.1 3.2A4.7 4.7 0 0 0 4.3 9.2c0 4.6 2.8 5.7 5.5 6a3 3 0 0 0-.8 2.3V21"/></svg>github.com/SmitSuni
+      </a>
+      <a class="contact-line" href="https://orcid.org/0009-0005-2715-8486" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 8.5v7M12 8.5h1.6a3.5 3.5 0 0 1 0 7H12z"/></svg>ORCID 0009-0005-2715-8486
+      </a>
     </div>
-  </header>
 
+    <div class="side-block">
+      <div class="side-label">Habilidades técnicas</div>
+      <div class="skill-group">
+        <h4>Programación</h4>
+        <ul>
+          <li>Python (Pandas, NumPy, Tkinter)</li>
+          <li>R · Java (POO, Swing)</li>
+          <li>C++ (WinAPI, STL)</li>
+          <li>HTML, CSS, JavaScript · VBA</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4>Ciencia de datos</h4>
+        <ul>
+          <li>scikit-learn · XGBoost · statsmodels</li>
+          <li>Random Forest · SVM · Redes neuronales</li>
+          <li>Flask · Streamlit</li>
+          <li>PennyLane (Quantum ML)</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4>Estadística</h4>
+        <ul>
+          <li>Descriptiva e inferencial</li>
+          <li>Regresión lineal, logística, Poisson y BN</li>
+          <li>Series de tiempo (SARIMA, ARX)</li>
+          <li>Estadística bayesiana · EViews</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4>Bases de datos</h4>
+        <ul>
+          <li>MariaDB / MySQL · SQLite</li>
+          <li>SQL avanzado · Modelado de datos</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4>Herramientas</h4>
+        <ul>
+          <li>Excel avanzado · LaTeX</li>
+          <li>Git · GitHub Pages · VS Code</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="side-block">
+      <div class="side-label">Idioma</div>
+      <span class="pill">Español — Nativo</span>
+    </div>
+
+    <button class="print-btn" id="print">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Descargar CV en PDF
+    </button>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
   <main>
-    <!-- HERO -->
-    <section class="hero" id="inicio">
-      <div class="hero-text">
-        <p class="eyebrow in" style="--d:0">Puno, Perú · Curriculum Vitae</p>
-        <h1 class="in" style="--d:1">Smit Alexander<br><em>Suni Morales</em></h1>
-        <p class="role in" style="--d:2">Ingeniería Estadística e Informática</p>
-        <p class="lead in" style="--d:3">Convierto datos en decisiones. Combino estadística, Machine Learning y desarrollo de software para resolver problemas reales en salud pública, gestión institucional y educación.</p>
-        <div class="cta in" style="--d:4">
-          <a class="btn primary" href="mailto:73584265@est.unap.edu.pe">Contactar</a>
-          <button class="btn ghost" id="print">Descargar CV (PDF)</button>
-        </div>
-        <ul class="hero-meta in" style="--d:5">
-          <li><span>Universidad</span>Nacional del Altiplano</li>
-          <li><span>Semestre</span>7.º · 2026-II</li>
-          <li><span>GitHub</span><a href="https://github.com/SmitSuni" target="_blank" rel="noopener">SmitSuni</a></li>
-          <li><span>ORCID</span><a href="https://orcid.org/0009-0005-2715-8486" target="_blank" rel="noopener">0009-0005-2715-8486</a></li>
-        </ul>
+
+    <!-- Plano animado: puente colgante -->
+    <section class="blueprint" aria-label="Ilustración de un puente colgante">
+      <div class="bp-head">
+        <span>PLANO N.º 01 · PUENTE COLGANTE</span>
+        <span>ESC. 1:2000</span>
       </div>
-      <figure class="portrait in" style="--d:2">
-        <div class="arch"><div class="frame"><img src="img/foto.jpg" alt="Retrato de Smit Alexander Suni Morales" width="1200" height="1600"></div></div>
-        <figcaption>Data Science · Machine Learning · Investigación</figcaption>
-      </figure>
-      <a class="scroll-hint" href="#perfil" aria-label="Bajar"><i></i></a>
-    </section>
+      <svg class="bridge" id="bridge" viewBox="0 0 800 270" role="img" aria-label="Puente colgante animado">
+        <defs>
+          <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <line x1="0" y1="0" x2="0" y2="6" class="hatch"/>
+          </pattern>
+        </defs>
 
-    <!-- CIFRAS -->
-    <section class="stats reveal" aria-label="Cifras">
-      <div><b data-count="380">0</b><span>horas de prácticas<br>pre-profesionales</span></div>
-      <div><b data-count="9959" data-sep="1">0</b><span>niños analizados<br>en investigación ENDES</span></div>
-      <div><b data-count="10">0</b><span>proyectos de software<br>y datos desarrollados</span></div>
-      <div><b data-count="5">0</b><span>modelos de ML<br>comparados en un artículo</span></div>
-    </section>
+        <!-- nubes / cotas superiores -->
+        <g class="float">
+          <path class="thin" d="M80 34h70M96 26h40"/>
+          <path class="thin" d="M640 30h80M660 22h44"/>
+        </g>
 
-    <!-- PERFIL -->
-    <section class="section" id="perfil">
-      <header class="sec-head reveal">
-        <span class="num">01</span>
-        <h2>Perfil profesional</h2>
-      </header>
-      <div class="profile reveal">
-        <p class="big">Estudiante de séptimo semestre de <strong>Ingeniería Estadística e Informática</strong> en la Universidad Nacional del Altiplano, con interés en la ciencia de datos aplicada al sector público y a la salud.</p>
-        <div class="cols">
-          <p>He trabajado en todo el proceso de los datos: limpieza, análisis exploratorio, modelado estadístico, validación y comunicación de resultados mediante aplicaciones web y reportes interactivos. En la Municipalidad Provincial de Melgar desarrollé herramientas que reemplazaron registros manuales y entregué un sistema de control de combustible en Python.</p>
-          <p>Como investigador del semillero de mi facultad, comparé regresión logística con splines frente a modelos de aprendizaje automático para predecir anemia infantil en el Perú. Hoy exploro el <em>Quantum Machine Learning</em> en mi proyecto de tesis.</p>
-        </div>
-        <ul class="tags">
-          <li>Machine Learning</li><li>Ciencia de datos</li><li>Estadística aplicada</li><li>Python</li><li>Salud pública</li><li>Gestión pública</li>
-        </ul>
+        <!-- cota del vano principal -->
+        <g class="dim draw" style="--i:8">
+          <path pathLength="1" d="M230 14v14M570 14v14M230 21h340"/>
+        </g>
+        <text class="label" x="400" y="16" text-anchor="middle">L = 340 m</text>
+
+        <!-- terreno / estribos -->
+        <path class="ground draw" style="--i:0" pathLength="1" d="M0 186h40l18 34H0z"/>
+        <path class="ground draw" style="--i:0" pathLength="1" d="M800 186h-40l-18 34h60z"/>
+        <rect x="0" y="188" width="40" height="30" fill="url(#hatch)" class="fade" style="--i:2"/>
+        <rect x="760" y="188" width="40" height="30" fill="url(#hatch)" class="fade" style="--i:2"/>
+
+        <!-- torres -->
+        <g class="tower draw" style="--i:1">
+          <path pathLength="1" d="M222 230V48M238 230V48M222 70h16M222 110h16M222 150h16M222 200h16M218 48h24"/>
+          <path pathLength="1" d="M562 230V48M578 230V48M562 70h16M562 110h16M562 150h16M562 200h16M558 48h24"/>
+        </g>
+
+        <!-- tablero -->
+        <g class="deck draw" style="--i:2">
+          <path pathLength="1" d="M20 176H780M20 186H780"/>
+        </g>
+        <g class="truss fade" style="--i:4" id="truss"></g>
+
+        <!-- cables principales -->
+        <g class="cable draw" style="--i:3">
+          <path pathLength="1" d="M30 176 Q130 150 230 50"/>
+          <path pathLength="1" d="M230 50 Q400 250 570 50"/>
+          <path pathLength="1" d="M570 50 Q670 150 770 176"/>
+        </g>
+
+        <!-- péndolas (generadas) -->
+        <g class="hanger" id="hangers"></g>
+
+        <!-- vehículos -->
+        <g class="cars">
+          <rect class="car" x="-30" y="169" width="18" height="6" rx="2"/>
+          <rect class="car c2" x="-30" y="169" width="12" height="6" rx="2"/>
+          <rect class="car c3" x="-30" y="169" width="22" height="6" rx="2"/>
+        </g>
+
+        <!-- agua -->
+        <g class="water">
+          <path class="wave w1" d="M0 236 q20 -6 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0"/>
+          <path class="wave w2" d="M0 250 q20 -5 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0"/>
+        </g>
+
+        <!-- anotaciones -->
+        <text class="label fade" style="--i:6" x="246" y="44">TORRE A</text>
+        <text class="label fade" style="--i:6" x="586" y="44">TORRE B</text>
+        <text class="label fade" style="--i:7" x="400" y="138" text-anchor="middle">f = 100 m</text>
+        <path class="dim fade" style="--i:7" d="M400 50v94" stroke-dasharray="3 3"/>
+        <text class="formula fade" style="--i:9" x="14" y="264">y(x) = 4f · x(L − x) / L²</text>
+      </svg>
+      <div class="bp-caption">
+        <p class="eyebrow">Curriculum Vitae · Puno, Perú</p>
+        <h2>Datos que sostienen <em>decisiones</em></h2>
+        <p>Estadística, Machine Learning y desarrollo de software aplicados a problemas reales de clima, salud, gestión pública y obras.</p>
       </div>
     </section>
 
-    <!-- EXPERIENCIA -->
-    <section class="section" id="experiencia">
-      <header class="sec-head reveal">
-        <span class="num">02</span>
-        <h2>Experiencia</h2>
-      </header>
+    <!-- Métricas -->
+    <div class="metric-strip reveal">
+      <div class="metric"><div class="num">Scopus</div><div class="label">Artículo publicado (2026)</div></div>
+      <div class="metric"><div class="num">380 h</div><div class="label">Prácticas pre-profesionales</div></div>
+      <div class="metric"><div class="num">10+</div><div class="label">Proyectos desarrollados</div></div>
+      <div class="metric"><div class="num">7.º sem.</div><div class="label">UNA Puno · 2026-II</div></div>
+    </div>
 
-      <article class="job reveal">
-        <div class="job-side">
+    <section class="reveal">
+      <h2>Perfil profesional</h2>
+      <div class="text">
+        <p>Estudiante de séptimo semestre de Ingeniería Estadística e Informática en la Universidad Nacional del Altiplano. Mi formación está orientada a la programación, las bases de datos, la estadística aplicada y el aprendizaje automático.</p>
+        <p>Soy coautor de un artículo indexado en Scopus sobre pronóstico de temperatura en el Altiplano peruano. En mis prácticas en la Municipalidad Provincial de Melgar desarrollé y entregué un sistema de control de combustible en Python. Me interesa aplicar la ciencia de datos a la gestión pública, la salud y la ingeniería.</p>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>Publicaciones e investigación</h2>
+
+      <article class="pub">
+        <div class="pub-badges"><span class="badge solid">Scopus</span><span class="badge">Coautor</span><span class="date">2026</span></div>
+        <h3><a href="https://doi.org/10.51847/zMqqEu22RP" target="_blank" rel="noopener">Multiple Linear Regression Outperforms Machine Learning for Monthly Temperature Forecasting across the Peruvian Altiplano</a></h3>
+        <p class="authors">Coyla-Idme L, Roque-Mamani VR, <strong>Suni-Morales SA</strong>, Salcca-Lagar K, Arias-Ramírez A, Flores-Nina AJ, Vilca-Solorzano RA.</p>
+        <p class="journal"><em>World Journal of Environmental Biosciences</em>, 15(3), 102–112 · DOI <a href="https://doi.org/10.51847/zMqqEu22RP" target="_blank" rel="noopener">10.51847/zMqqEu22RP</a></p>
+        <p>Comparación de regresión lineal, Random Forest y perceptrón con 7,279 registros diarios de la estación de Puno (2003–2024), replicada en 11 series del Altiplano. Los modelos redujeron el error absoluto medio de 0.597 °C a 0.415 °C. La regresión lineal fue el mejor modelo en 9 de 11 estaciones.</p>
+      </article>
+
+      <article class="pub">
+        <div class="pub-badges"><span class="badge">Autor principal</span><span class="badge">Manuscrito</span><span class="date">2026</span></div>
+        <h3>Aprendizaje automático frente a regresión logística con splines para predecir anemia infantil en el Perú: análisis de la ENDES 2024</h3>
+        <p>Análisis de 9,959 niños de 6 a 35 meses con 38 predictores. Compara regresión logística, RL con splines, Random Forest, XGBoost y perceptrón multicapa (AUC 0.643–0.693). La RL con splines iguala a XGBoost y es más interpretable.</p>
+      </article>
+
+      <article class="pub">
+        <div class="pub-badges"><span class="badge">Proyecto de tesis</span><span class="date">2026</span></div>
+        <h3>Clasificador cuántico variacional frente a Machine Learning clásico en la clasificación de datos de cáncer de mama</h3>
+        <p>Estudio experimental con simulación cuántica: un VQC de 4 qubits en PennyLane frente a regresión logística y SVM sobre el conjunto Breast Cancer Wisconsin.</p>
+      </article>
+    </section>
+
+    <section class="reveal">
+      <h2>Experiencia</h2>
+      <div class="item">
+        <div class="head">
+          <span class="title">Practicante pre-profesional · Almacén Central</span>
           <span class="date">Ene – Mar 2026</span>
-          <span class="place">Ayaviri, Puno</span>
         </div>
-        <div class="job-body">
-          <h3>Practicante pre-profesional · Área de Almacén Central</h3>
-          <p class="org">Municipalidad Provincial de Melgar · Sub Gerencia de Logística · 380 horas</p>
-          <ul class="bullets">
-            <li><strong>Desarrollé un Sistema de Control de Combustible</strong> en Python (Tkinter, SQLite, Pandas) con módulos de despacho, stock en tiempo real, historial por vehículo, alertas de abastecimiento y reportes en Excel. Lo instalé y entregué a la institución.</li>
-            <li><strong>Creé SysKardex</strong>, un programa de kardex que llena automáticamente las fichas Bincard desde el inventario y calcula los saldos de entradas y salidas. Antes se llenaban a mano.</li>
-            <li>Participé en el <strong>inventario inicial de bienes patrimoniales 2026</strong> (Directiva N.° 0006-2021-EF/54.01). Construí la base de datos normalizada y automaticé fichas con Excel VBA.</li>
-            <li>Medí el combustible en envases de difícil acceso con métodos volumétricos alternativos (varillaje y aforo con recipiente calibrado) y modelos geométricos de cilindros. Total cuantificado: 255 galones.</li>
-            <li>Reorganicé cuatro espacios de almacenamiento: Estadio, Ex-Camal (con instalación de andamios), Coliseo y Almacén Interno.</li>
-          </ul>
-          <ul class="chips"><li>Python</li><li>Tkinter</li><li>SQLite</li><li>Pandas</li><li>openpyxl</li><li>Excel VBA</li></ul>
-        </div>
-      </article>
-    </section>
-
-    <!-- INVESTIGACIÓN -->
-    <section class="section" id="investigacion">
-      <header class="sec-head reveal">
-        <span class="num">03</span>
-        <h2>Investigación</h2>
-      </header>
-
-      <div class="research">
-        <article class="paper reveal">
-          <span class="label">Artículo original · Manuscrito para la RPMESP</span>
-          <h3>Aprendizaje automático frente a regresión logística con splines para predecir anemia infantil en el Perú: análisis de la ENDES 2024</h3>
-          <p>Análisis secundario de 9,959 niños de 6 a 35 meses con 38 predictores. Comparé regresión logística, RL con splines, Random Forest, XGBoost y perceptrón multicapa. Usé partición por conglomerados y validación excluyendo cada departamento.</p>
-          <div class="findings">
-            <div><b>0.643–0.693</b><span>rango de AUC</span></div>
-            <div><b>35.3 %</b><span>prevalencia ponderada</span></div>
-            <div><b>53.1 %</b><span>prevalencia en Puno</span></div>
-          </div>
-          <p class="note">Hallazgo: una regresión logística con splines en la edad iguala a XGBoost y es más interpretable. Los modelos nacionales no son adecuados para focalizar intervenciones en Puno.</p>
-          <p class="meta">Autor principal · Semillero de Investigación FINESI-UNAP · Python · scikit-learn · XGBoost</p>
-        </article>
-
-        <article class="paper reveal">
-          <span class="label">Proyecto de tesis · 2026</span>
-          <h3>Clasificador cuántico variacional frente a Machine Learning clásico en la clasificación de datos de cáncer de mama</h3>
-          <p>Estudio experimental con simulación cuántica. Comparo un VQC de 4 qubits en PennyLane con regresión logística y SVM sobre el conjunto Breast Cancer Wisconsin (569 casos, 30 variables reducidas por PCA). El experimento se repite 10 veces con distintas semillas y contraste estadístico.</p>
-          <p class="meta">Quantum ML · PennyLane · scikit-learn · PCA · Diseño experimental</p>
-        </article>
+        <div class="subtitle">Municipalidad Provincial de Melgar · Ayaviri, Puno · 380 horas</div>
+        <ul class="bullets">
+          <li>Desarrollé y entregué un <strong>Sistema de Control de Combustible</strong> en Python (Tkinter, SQLite, Pandas) con despachos, stock en tiempo real, alertas y reportes en Excel.</li>
+          <li>Creé <strong>SysKardex</strong>, que llena automáticamente las fichas Bincard desde el inventario y calcula los saldos.</li>
+          <li>Participé en el inventario inicial de bienes patrimoniales 2026. Construí la base de datos y automaticé fichas con Excel VBA.</li>
+          <li>Medí el combustible en envases de difícil acceso con métodos volumétricos y modelos geométricos de cilindros.</li>
+          <li>Reorganicé cuatro almacenes: Estadio, Ex-Camal (con instalación de andamios), Coliseo y Almacén Interno.</li>
+        </ul>
       </div>
     </section>
 
-    <!-- PROYECTOS -->
-    <section class="section" id="proyectos">
-      <header class="sec-head reveal">
-        <span class="num">04</span>
-        <h2>Proyectos seleccionados</h2>
-      </header>
-
-      <div class="grid">
-        <article class="card reveal">
-          <span class="kind">Machine Learning · Web</span>
-          <h3>Medical Cost ML</h3>
-          <p>Aplicación web que entrena y compara Regresión Lineal, Árbol, Random Forest y SVR para predecir costos médicos. Incluye laboratorio de hiperparámetros, simulador “¿qué pasa si…?”, Monte Carlo y validación de supuestos. R² en prueba de hasta 0.88.</p>
-          <ul class="chips"><li>Flask</li><li>scikit-learn</li><li>statsmodels</li><li>JS / SVG</li></ul>
-        </article>
-        <article class="card reveal">
-          <span class="kind">Software · Gestión pública</span>
-          <h3>Sistema de Control de Combustible</h3>
-          <p>Sistema de escritorio para la flota municipal de Melgar: registro de despachos, stock en tiempo real, alertas de mínimo, historial por vehículo y reportes con gráficos de tendencia.</p>
-          <ul class="chips"><li>Python</li><li>Tkinter</li><li>SQLite</li><li>Pandas</li></ul>
-        </article>
-        <article class="card reveal">
-          <span class="kind">Software · Almacén</span>
-          <h3>SysKardex 1.0</h3>
-          <p>Kardex de Control Visible de Almacén que importa el inventario desde Excel, valida salidas contra el saldo e imprime fichas Bincard en el formato oficial, una o todas a la vez.</p>
-          <ul class="chips"><li>Python</li><li>Excel</li><li>openpyxl</li></ul>
-        </article>
-        <article class="card reveal">
-          <span class="kind">Web · Educación</span>
-          <h3>Asistente Aula Virtual UNAP</h3>
-          <p>Prototipo que avisa por correo a los alumnos de sus tareas pendientes según su urgencia. El docente ve quién no entregó, envía recordatorios con un clic e identifica a los alumnos en riesgo.</p>
-          <ul class="chips"><li>Flask</li><li>SQLite</li><li>Notificaciones</li></ul>
-        </article>
-        <article class="card reveal">
-          <span class="kind">Ingeniería de software · Equipo</span>
-          <h3>SIDDA</h3>
-          <p>Sistema Inteligente para la Detección Temprana de Dificultades de Aprendizaje en educación primaria. Elaboramos la especificación de requisitos (ERS), el catálogo de requisitos y el modelo de casos de uso.</p>
-          <ul class="chips"><li>Requisitos (ERS)</li><li>UML</li><li>Streamlit</li></ul>
-        </article>
-        <article class="card reveal">
-          <span class="kind">Sistemas distribuidos</span>
-          <h3>CHASQUI v1.0</h3>
-          <p>Protocolo de mensajería por relevos con acuse de ruta (<em>store-and-forward</em>), inspirado en los chasquis del Tahuantinsuyo. Está pensado para postas rurales, minas y aulas con conectividad intermitente. Incluye el diseño de la trama a nivel de bits.</p>
-          <ul class="chips"><li>Protocolos</li><li>Python</li><li>Redes</li></ul>
-        </article>
-        <article class="card reveal">
-          <span class="kind">Redes · Equipo</span>
-          <h3>Red de datos UNAJ</h3>
-          <p>Propuesta técnica de cableado estructurado para la sede principal de la Universidad Nacional de Juliaca: planos de enlace y sedes, segmentación por VLAN y simulación interactiva de la red.</p>
-          <ul class="chips"><li>Cableado estructurado</li><li>VLAN</li><li>Planos</li></ul>
-        </article>
-        <article class="card reveal">
-          <span class="kind">Estadística</span>
-          <h3>Series de tiempo · Puno</h3>
-          <p>Modelado SARIMA y ARX de series económicas y de ventas, con análisis de autocorrelación, diagnóstico de residuos y pronóstico en EViews y Python.</p>
-          <ul class="chips"><li>SARIMA</li><li>ARX</li><li>EViews</li></ul>
-        </article>
-        <article class="card reveal">
-          <span class="kind">Software · Estadística</span>
-          <h3>Sistema de estadística con interfaz gráfica</h3>
-          <p>Aplicación de escritorio que calcula medidas descriptivas e inferenciales y genera histogramas, curvas normales y diagramas de caja para datos agrupados y no agrupados.</p>
-          <ul class="chips"><li>Python</li><li>Tkinter</li><li>NumPy</li></ul>
-        </article>
-        <article class="card reveal">
-          <span class="kind">Software · Bases de datos</span>
-          <h3>Sistema de biblioteca universitaria</h3>
-          <p>Gestión de usuarios, reservas y préstamos de libros con persistencia en una base de datos relacional y generación de reportes.</p>
-          <ul class="chips"><li>Python</li><li>MariaDB</li><li>SQL</li></ul>
-        </article>
+    <section class="reveal">
+      <h2>Educación</h2>
+      <div class="item">
+        <div class="head">
+          <span class="title">Universidad Nacional del Altiplano</span>
+          <span class="date">En curso · 7.º semestre</span>
+        </div>
+        <div class="subtitle">Ingeniería Estadística e Informática · FINESI</div>
+        <p>Formación en desarrollo de software, bases de datos, estadística aplicada, aprendizaje automático, redes y sistemas de información. Integrante del Semillero de Investigación de la facultad.</p>
       </div>
     </section>
 
-    <!-- HABILIDADES -->
-    <section class="section" id="habilidades">
-      <header class="sec-head reveal">
-        <span class="num">05</span>
-        <h2>Habilidades</h2>
-      </header>
-      <div class="skills">
-        <div class="skill-group reveal">
-          <h3>Lenguajes y datos</h3>
-          <ul><li>Python · R</li><li>Java (POO, Swing) · C++ (WinAPI)</li><li>SQL · MariaDB / MySQL · SQLite</li><li>Excel avanzado · VBA</li><li>HTML · CSS · JavaScript</li><li>LaTeX</li></ul>
+    <section class="reveal">
+      <h2>Proyectos destacados</h2>
+      <div class="proj-grid">
+        <div class="proj">
+          <div class="head"><span class="title">Sistema de Control de Combustible</span><span class="date">2026</span></div>
+          <p>Software de escritorio para la flota municipal de Melgar: despachos, stock, alertas de mínimo, historial por vehículo y reportes.</p>
+          <div class="tags"><span>Python</span><span>Tkinter</span><span>SQLite</span><span>Pandas</span></div>
         </div>
-        <div class="skill-group reveal">
-          <h3>Machine Learning</h3>
-          <ul><li>scikit-learn · XGBoost</li><li>Random Forest · SVM / SVR</li><li>Árboles de regresión</li><li>Redes neuronales (MLP)</li><li>Aprendizaje no supervisado</li><li>PennyLane (QML)</li></ul>
+        <div class="proj">
+          <div class="head"><span class="title">Medical Cost ML</span><span class="date">2026</span></div>
+          <p>Aplicación web que compara Regresión Lineal, Árbol, Random Forest y SVR, con laboratorio de hiperparámetros y simulador. R² en prueba de hasta 0.88.</p>
+          <div class="tags"><span>Flask</span><span>scikit-learn</span><span>statsmodels</span></div>
         </div>
-        <div class="skill-group reveal">
-          <h3>Estadística</h3>
-          <ul><li>Regresión lineal, logística, Poisson y BN</li><li>Splines · calibración · AUC</li><li>Series de tiempo (SARIMA, ARX)</li><li>Estadística bayesiana</li><li>Encuestas complejas (ENDES)</li><li>statsmodels · EViews</li></ul>
+        <div class="proj">
+          <div class="head"><span class="title">Red de datos UNAJ</span><span class="date">2026</span></div>
+          <p>Proyecto de cableado estructurado para la sede principal de la Universidad Nacional de Juliaca: planos de enlace y sedes, VLAN y simulación de la red.</p>
+          <div class="tags"><span>Cableado estructurado</span><span>VLAN</span><span>Planos</span></div>
         </div>
-        <div class="skill-group reveal">
-          <h3>Desarrollo y sistemas</h3>
-          <ul><li>Flask · Streamlit</li><li>Tkinter (escritorio)</li><li>Pandas · NumPy · openpyxl</li><li>Requisitos y UML</li><li>Redes y cableado estructurado</li><li>Sistemas distribuidos</li></ul>
+        <div class="proj">
+          <div class="head"><span class="title">SysKardex 1.0</span><span class="date">2026</span></div>
+          <p>Kardex de Control Visible de Almacén: importa el inventario desde Excel, valida salidas e imprime fichas Bincard en formato oficial.</p>
+          <div class="tags"><span>Python</span><span>Excel</span><span>openpyxl</span></div>
+        </div>
+        <div class="proj">
+          <div class="head"><span class="title">Dashboard de herramientas de ingeniería</span><span class="date">2024</span></div>
+          <p>Conversor de unidades, calculadora de resistencia de materiales según el RNE, diseño de escaleras y módulo estadístico con visualizaciones animadas.</p>
+          <div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+        </div>
+        <div class="proj">
+          <div class="head"><span class="title">CHASQUI v1.0</span><span class="date">2026</span></div>
+          <p>Protocolo de mensajería por relevos (<em>store-and-forward</em>) para zonas con conectividad intermitente, como postas rurales y minas.</p>
+          <div class="tags"><span>Sistemas distribuidos</span><span>Redes</span></div>
+        </div>
+        <div class="proj">
+          <div class="head"><span class="title">Asistente Aula Virtual UNAP</span><span class="date">2026</span></div>
+          <p>Prototipo que avisa por correo de las tareas pendientes y muestra al docente quién no entregó y qué alumnos están en riesgo.</p>
+          <div class="tags"><span>Flask</span><span>SQLite</span></div>
+        </div>
+        <div class="proj">
+          <div class="head"><span class="title">SIDDA</span><span class="date">2026</span></div>
+          <p>Sistema para la detección temprana de dificultades de aprendizaje en primaria. Trabajo en equipo: requisitos (ERS) y casos de uso.</p>
+          <div class="tags"><span>Requisitos</span><span>UML</span></div>
+        </div>
+        <div class="proj">
+          <div class="head"><span class="title">Sistema de estadística con interfaz gráfica</span><span class="date">2024</span></div>
+          <p>Medidas descriptivas e inferenciales con histogramas, curvas normales y diagramas de caja para datos agrupados y no agrupados.</p>
+          <div class="tags"><span>Python</span><span>Tkinter</span><span>NumPy</span></div>
+        </div>
+        <div class="proj">
+          <div class="head"><span class="title">Sistema de biblioteca universitaria</span><span class="date">2024</span></div>
+          <p>Gestión de usuarios, reservas y préstamos con persistencia en MariaDB y generación de reportes.</p>
+          <div class="tags"><span>Python</span><span>MariaDB</span><span>SQL</span></div>
+        </div>
+        <div class="proj">
+          <div class="head"><span class="title">Métodos numéricos en C++</span><span class="date">2023 – 2024</span></div>
+          <p>Herramienta con WinAPI para resolver ecuaciones, calcular raíces y graficar funciones de forma interactiva.</p>
+          <div class="tags"><span>C++</span><span>WinAPI</span></div>
+        </div>
+        <div class="proj">
+          <div class="head"><span class="title">Series de tiempo · Puno</span><span class="date">2026</span></div>
+          <p>Modelado SARIMA y ARX con análisis de autocorrelación, diagnóstico de residuos y pronóstico.</p>
+          <div class="tags"><span>SARIMA</span><span>ARX</span><span>EViews</span></div>
         </div>
       </div>
     </section>
 
-    <!-- EDUCACIÓN -->
-    <section class="section" id="educacion">
-      <header class="sec-head reveal">
-        <span class="num">06</span>
-        <h2>Formación</h2>
-      </header>
-      <article class="job reveal">
-        <div class="job-side">
-          <span class="date">2021 — Actualidad</span>
-          <span class="place">Puno, Perú</span>
-        </div>
-        <div class="job-body">
-          <h3>Ingeniería Estadística e Informática</h3>
-          <p class="org">Universidad Nacional del Altiplano · Facultad de Ingeniería Estadística e Informática (FINESI)</p>
-          <p class="muted">7.º semestre (2026-II). Cursos destacados: Aprendizaje Supervisado, Estadística Bayesiana, Series de Tiempo, Modelos Lineales, Ingeniería de Software, Sistemas Distribuidos, Administración de Redes y Metodología de la Investigación.</p>
-        </div>
-      </article>
-    </section>
-
-    <!-- CONTACTO -->
-    <section class="contact reveal" id="contacto">
-      <p class="eyebrow">Contacto</p>
-      <h2>¿Conversamos sobre datos?</h2>
-      <p>Estoy disponible para prácticas profesionales, proyectos de análisis de datos y colaboraciones de investigación.</p>
-      <div class="contact-links">
-        <a href="mailto:73584265@est.unap.edu.pe">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M3 6h18v12H3z M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-          73584265@est.unap.edu.pe
-        </a>
-        <a href="https://orcid.org/0009-0005-2715-8486" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 8.5v7M12 8.5h1.6a3.5 3.5 0 0 1 0 7H12z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
-          ORCID 0009-0005-2715-8486
-        </a>
-        <a href="https://github.com/SmitSuni" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.5a3 3 0 0 0-.8-2.3c2.7-.3 5.5-1.3 5.5-6a4.7 4.7 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.3 1.3a11.4 11.4 0 0 0-6 0C6.7 2.5 5.7 2.8 5.7 2.8a4.3 4.3 0 0 0-.1 3.2A4.7 4.7 0 0 0 4.3 9.2c0 4.6 2.8 5.7 5.5 6a3 3 0 0 0-.8 2.3V21" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          github.com/SmitSuni
-        </a>
+    <section class="reveal">
+      <h2>Competencias personales</h2>
+      <div class="competencias">
+        <span>Responsabilidad y compromiso</span><span>Capacidad analítica</span><span>Organización y planificación</span>
+        <span>Aprendizaje continuo</span><span>Adaptabilidad</span><span>Trabajo en equipo</span>
       </div>
     </section>
+
+    <section class="reveal">
+      <h2>Objetivo profesional</h2>
+      <div class="objetivo">Aplicar la estadística, el aprendizaje automático y el desarrollo de software para resolver problemas reales en instituciones públicas y privadas. Quiero aportar a equipos de análisis de datos, desarrollo de sistemas e investigación, y seguir creciendo profesionalmente.</div>
+    </section>
+
+    <footer>
+      © <span id="year">2026</span> Smit Alexander Suni Morales · <a href="https://github.com/SmitSuni" target="_blank" rel="noopener">github.com/SmitSuni</a>
+    </footer>
   </main>
+</div>
 
-  <footer class="footer">
-    <span>© <span id="year">2026</span> Smit Alexander Suni Morales</span>
-    <a href="#inicio">Volver arriba ↑</a>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

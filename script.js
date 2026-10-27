@@ -1,83 +1,49 @@
 (() => {
-  const root = document.documentElement;
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+  const NS = "http://www.w3.org/2000/svg";
 
-  // Tema claro / oscuro (recordado en este navegador)
-  const store = {
-    get: k => { try { return localStorage.getItem(k); } catch (e) { return null; } },
-    set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} }
-  };
-  const saved = store.get("theme");
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  root.dataset.theme = saved || (prefersDark ? "dark" : "light");
-  $("#theme").addEventListener("click", () => {
-    root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
-    store.set("theme", root.dataset.theme);
+  // Péndolas del puente: siguen la curva de cada cable (Bézier cuadrática)
+  const DECK = 176;
+  const spans = [
+    { p0: [30, 176], p1: [130, 150], p2: [230, 50], from: 0.25, step: 0.125 },
+    { p0: [230, 50], p1: [400, 250], p2: [570, 50], from: 0.0625, step: 0.0625 },
+    { p0: [570, 50], p1: [670, 150], p2: [770, 176], from: 0.125, step: 0.125 }
+  ];
+  const q = (a, b, c, t) => (1 - t) ** 2 * a + 2 * (1 - t) * t * b + t ** 2 * c;
+  const hangers = $("#hangers");
+  let n = 0;
+  spans.forEach(s => {
+    for (let t = s.from; t < 1 - 1e-6; t += s.step) {
+      const x = q(s.p0[0], s.p1[0], s.p2[0], t), y = q(s.p0[1], s.p1[1], s.p2[1], t);
+      if (DECK - y < 4) continue;
+      const l = document.createElementNS(NS, "line");
+      l.setAttribute("x1", x.toFixed(1)); l.setAttribute("x2", x.toFixed(1));
+      l.setAttribute("y1", y.toFixed(1)); l.setAttribute("y2", DECK);
+      l.style.animationDelay = (1.6 + n++ * 0.04) + "s";
+      hangers.appendChild(l);
+    }
   });
 
-  // Menú móvil
-  const nav = $(".nav nav");
-  $("#menu").addEventListener("click", () => nav.classList.toggle("open"));
-  $$(".nav nav a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
+  // Celosía bajo el tablero
+  const truss = $("#truss");
+  let d = "";
+  for (let x = 20; x < 780; x += 20) d += `M${x} 186 L${x + 10} 196 L${x + 20} 186 `;
+  d += "M20 196H780";
+  const tp = document.createElementNS(NS, "path");
+  tp.setAttribute("d", d);
+  truss.appendChild(tp);
 
-  // Barra de progreso + navegación sólida
-  const header = $("#nav"), bar = $("#progress");
-  const onScroll = () => {
-    const y = scrollY, h = document.body.scrollHeight - innerHeight;
-    header.classList.toggle("solid", y > 24);
-    bar.style.width = (h > 0 ? (y / h) * 100 : 0) + "%";
-  };
-  addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
+  // Aparición sobria al hacer scroll
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add("shown"); io.unobserve(e.target); }
+  }), { threshold: 0.1 });
+  $$(".reveal").forEach(el => io.observe(el));
 
-  // Aparición al hacer scroll
-  const reveal = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (!e.isIntersecting) return;
-      e.target.classList.add("shown");
-      if (e.target.classList.contains("stats")) countUp(e.target);
-      reveal.unobserve(e.target);
-    });
-  }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
-  $$(".reveal").forEach((el, i) => {
-    el.style.transitionDelay = (el.parentElement.classList.contains("grid") ? (i % 2) * 90 : 0) + "ms";
-    reveal.observe(el);
-  });
-  setTimeout(() => $(".portrait").classList.add("shown"), 200);
-
-  // Contadores animados
-  function countUp(box) {
-    $$("[data-count]", box).forEach(el => {
-      const end = +el.dataset.count, sep = el.dataset.sep, t0 = performance.now(), dur = 1600;
-      const fmt = n => sep ? n.toLocaleString("en-US") : String(n);
-      const tick = now => {
-        const p = Math.min(1, (now - t0) / dur), eased = 1 - Math.pow(1 - p, 3);
-        el.textContent = fmt(Math.round(end * eased));
-        if (p < 1) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-    });
-  }
-
-  // Enlace activo en el menú
-  const links = new Map($$(".nav nav a").map(a => [a.getAttribute("href").slice(1), a]));
-  const spy = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (!e.isIntersecting) return;
-      links.forEach(a => a.classList.remove("active"));
-      const a = links.get(e.target.id);
-      if (a) a.classList.add("active");
-    });
-  }, { rootMargin: "-45% 0px -50% 0px" });
-  $$("main section[id]").forEach(s => spy.observe(s));
-
-  // Descargar CV en PDF (diálogo de impresión → Guardar como PDF)
+  // CV en PDF
   $("#print").addEventListener("click", () => {
-    const prev = root.dataset.theme;
-    root.dataset.theme = "light";
     $$(".reveal").forEach(el => el.classList.add("shown"));
-    setTimeout(() => { window.print(); root.dataset.theme = prev; }, 50);
+    setTimeout(() => window.print(), 50);
   });
 
   $("#year").textContent = new Date().getFullYear();
